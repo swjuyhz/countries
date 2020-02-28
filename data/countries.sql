@@ -3,8 +3,8 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 -- Table structure for country
 -- ----------------------------
-DROP TABLE IF EXISTS `countries`;
-CREATE TABLE `countries` (
+DROP TABLE IF EXISTS `country`;
+CREATE TABLE `country` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键Id',
   `name_en` varchar(64) NOT NULL COMMENT '国家英文全名',
   `name_zh` varchar(32) DEFAULT NULL COMMENT '国家中文名',

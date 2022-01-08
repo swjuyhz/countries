@@ -4,17 +4,17 @@
 DROP TABLE IF EXISTS `country`;
 CREATE TABLE `country` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键Id',
-  `name_en` varchar(64) NOT NULL COMMENT '国家英文全名',
-  `name_zh` varchar(32) DEFAULT NULL COMMENT '国家中文名',
-  `name_international_abbr` varchar(4) NOT NULL COMMENT '国际域名缩写',
-  `country_phone_code` int(11) NOT NULL COMMENT '国家电话代码',
-  `zone` varchar(16) NOT NULL COMMENT '国家所属洲，例如：亚洲，非洲...',
+  `name_en` varchar(64) NOT NULL COMMENT '国家/国家特别行政区英文全名',
+  `name_zh` varchar(32) DEFAULT NULL COMMENT '国家/国家特别行政区中文名',
+  `name_international_abbr` varchar(4) NOT NULL COMMENT '国际/国家特别行政区域名缩写',
+  `country_phone_code` int(11) NOT NULL COMMENT '国家/国家特别行政区电话代码',
+  `zone` varchar(16) NOT NULL COMMENT '国家/国家特别行政区所属洲，例如：亚洲，非洲...',
   `zone_alias` varchar(16) DEFAULT NULL COMMENT '所属分区，如中东，有别于洲，但也形成了比较通俗的划分',
-  `lat` varchar(32) DEFAULT NULL COMMENT '国家所处纬度',
-  `lon` varchar(32) DEFAULT NULL COMMENT '国家所处经度',
+  `lat` varchar(32) DEFAULT NULL COMMENT '国家/国家特别行政区所处纬度',
+  `lon` varchar(32) DEFAULT NULL COMMENT '国家/国家特别行政区所处经度',
   PRIMARY KEY (`id`),
   KEY `name_en` (`name_en`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=215 DEFAULT CHARSET=utf8 COMMENT='国家表';
+) ENGINE=InnoDB AUTO_INCREMENT=215 DEFAULT CHARSET=utf8 COMMENT='国家/国家特别行政区表';
 
 -- ----------------------------
 -- Records of country
@@ -91,7 +91,7 @@ INSERT INTO `country` VALUES ('69', 'Greece', '希腊', 'GR', '30', 'Europe', nu
 INSERT INTO `country` VALUES ('70', 'Guatemala', '危地马拉', 'GT', '502', 'North America', null, '14.40', '-90.22');
 INSERT INTO `country` VALUES ('71', 'Guam', '关岛', 'GU', '1671', 'Oceania', null, null, null);
 INSERT INTO `country` VALUES ('72', 'Guyana', '圭亚那', 'GY', '592', 'South America', null, '6.50', '-58.12');
-INSERT INTO `country` VALUES ('73', 'Hongkong', '香港特别行政区', 'HK', '852', 'Asia', null, '22.350627', '114.1849161');
+INSERT INTO `country` VALUES ('73', 'Hongkong', ''中华人民共和国香港特别行政区, 'HK', '852', 'Asia', null, '22.350627', '114.1849161');
 INSERT INTO `country` VALUES ('74', 'Honduras', '洪都拉斯', 'HN', '504', 'North America', null, '14.05', '-87.14');
 INSERT INTO `country` VALUES ('75', 'Haiti', '海地', 'HT', '509', 'North America', null, '18.40', '-72.20');
 INSERT INTO `country` VALUES ('76', 'Hungary', '匈牙利', 'HU', '36', 'Europe', null, '47.29', '19.05');
@@ -133,7 +133,7 @@ INSERT INTO `country` VALUES ('111', 'Madagascar', '马达加斯加', 'MG', '261
 INSERT INTO `country` VALUES ('112', 'Mali', '马里', 'ML', '223', 'Africa', null, '12.34', '-7.55');
 INSERT INTO `country` VALUES ('113', 'Burma', '缅甸', 'MM', '95', 'Asia', null, '16.45', '96.20');
 INSERT INTO `country` VALUES ('114', 'Mongolia', '蒙古', 'MN', '976', 'Asia', null, '46.8250388', '103.8499736');
-INSERT INTO `country` VALUES ('115', 'Macao', '澳门', 'MO', '853', 'Asia', null, '22.1899448', '113.5380454');
+INSERT INTO `country` VALUES ('115', 'Macao', '中华人民共和国澳门特别行政区', 'MO', '853', 'Asia', null, '22.1899448', '113.5380454');
 INSERT INTO `country` VALUES ('116', 'Montserrat Is', '蒙特塞拉特岛', 'MS', '1664', 'Asia', null, '65.59355', '-18.56986');
 INSERT INTO `country` VALUES ('117', 'Malta', '马耳他', 'MT', '356', 'Europe', null, '35.54', '14.31');
 INSERT INTO `country` VALUES ('118', 'Mariana Is', '马里亚那群岛', 'NULL', '1670', 'Oceania', null, '-20.3781468', '-43.4174862');
